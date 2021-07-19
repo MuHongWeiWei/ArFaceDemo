@@ -1,12 +1,12 @@
 <h1>Android ArCore 臉部偵測 活體辨識</h1>
 
 <ol>
-  <li><a href="https://badgameshow.com/fly/sharedpreferences-工具類-儲存物件儲存資料/fly/util/#a">導入基本設置</a></li>
-  <li><a href="https://badgameshow.com/fly/sharedpreferences-工具類-儲存物件儲存資料/fly/util/#b">創建FaceArFragment</a></li>
-  <li><a href="https://badgameshow.com/fly/sharedpreferences-工具類-儲存物件儲存資料/fly/util/#c">畫面布局</a></li>
-  <li><a href="https://badgameshow.com/fly/sharedpreferences-工具類-儲存物件儲存資料/fly/util/#d">創建臉部相關類別</a></li>
-  <li><a href="https://badgameshow.com/fly/sharedpreferences-工具類-儲存物件儲存資料/fly/util/#e">程式碼範例</a></li>
-  <li><a href="https://badgameshow.com/fly/sharedpreferences-工具類-儲存物件儲存資料/fly/util/#f">Github</a></li>
+  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#a">導入基本設置</a></li>
+  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#b">創建FaceArFragment</a></li>
+  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#c">畫面布局</a></li>
+  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#d">創建臉部相關類別</a></li>
+  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#e">程式碼範例</a></li>
+  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#f">Github</a></li>
 </ol>
 
 <hr />

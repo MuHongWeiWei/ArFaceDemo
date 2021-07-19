@@ -6,7 +6,8 @@
   <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#c">畫面布局</a></li>
   <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#d">創建臉部相關類別</a></li>
   <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#e">程式碼範例</a></li>
-  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#f">Github</a></li>
+  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#f">效果展示</a></li>
+  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#g">Github</a></li>
 </ol>
 
 <hr />
@@ -83,6 +84,7 @@ dependencies {
 <h3>3.畫面布局</h3>
 
 ```XML
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -130,6 +132,8 @@ dependencies {
 <a id="d"></a>
 
 <h3>4.創建臉部相關類別</h3>
+
+<img src="https://i.imgur.com/ZX8moaR.png" width="50%">
 
 <h4>臉部位置</h4>
 
@@ -408,7 +412,11 @@ class CustomFaceNode(
 </code></pre>
 
 <a id="f"></a>
+<h3>6.效果展示</h3>
+<img src="https://badgameshow.com/fly/wp-content/uploads/2021/07/Screenrecorder-2021-07-19-17-48-09-559.gif" width="30%">
 
-<h3>6.Github</h3>
+
+<a id="g"></a>
+<h3>7.Github</h3>
 
 <a class="wp-editor-md-post-content-link" href="https://github.com/MuHongWeiWei/ArFaceDemo">Github</a>

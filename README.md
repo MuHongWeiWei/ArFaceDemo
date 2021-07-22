@@ -413,7 +413,7 @@ class CustomFaceNode(
 
 <a id="f"></a>
 <h3>6.效果展示</h3>
-<img src="https://reurl.cc/4aGZej" width="30%">
+<img src="https://github.com/MuHongWeiWei/ArFaceDemo/blob/master/app/src/main/res/drawable/demo.gif" width="30%">
 
 
 <a id="g"></a>

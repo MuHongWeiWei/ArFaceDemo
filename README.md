@@ -1,24 +1,28 @@
-<h1>Android ArCore 臉部偵測 活體辨識</h1>
+# Android 臉部偵測 ArCore 活體辨識
 
+##### Android 將 臉部偵測 整合到系統,適用於Android平台, 臉部偵測用有臉部特徵點，ArCore實做臉部偵測,可以用來判定是否為真人,可以防止偽造,臉部偵測是一個可以很好辨認出真實性的功能,Android 臉部偵測是使用ArCore來實作。
+
+---
+
+#### 文章目錄
 <ol>
-  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#a">導入基本設置</a></li>
-  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#b">創建FaceArFragment</a></li>
-  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#c">畫面布局</a></li>
-  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#d">創建臉部相關類別</a></li>
-  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#e">程式碼範例</a></li>
-  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#f">效果展示</a></li>
-  <li><a href="https://badgameshow.com/fly/android-arcore-臉部偵測-活體辨識/fly/android/#g">Github</a></li>
+    <li><a href="#a">導入基本設置</a></li>
+    <li><a href="#b">創建FaceArFragment</a></li>
+    <li><a href="#c">畫面布局</a></li>
+    <li><a href="#d">創建臉部相關類別</a></li>
+    <li><a href="#e">程式碼範例</a></li>
+    <li><a href="#f">效果展示</a></li>
+    <li><a href="#g">Github</a></li>
 </ol>
 
-<hr />
+---
+
 
 <a id="a"></a>
-
-<h3>1.導入基本設置</h3>
-
-<h4>Module</h4>
-
-<pre><code class="language-Gradle line-numbers">plugins {
+#### 1.導入基本設置
+##### Module
+```Gradle
+plugins {
     id 'com.google.ar.sceneform.plugin'
     id 'kotlin-android-extensions'
 }
@@ -27,34 +31,32 @@ dependencies {
     implementation "com.google.ar.sceneform.ux:sceneform-ux:1.17.1"
     implementation "androidx.fragment:fragment-ktx:1.3.2"
 }
-</code></pre>
+```
 
-<h4>Project</h4>
-
-<pre><code class="language-Gradle line-numbers">buildscript {
+##### Project
+```Gradle
+buildscript {
     dependencies {
          classpath 'com.google.ar.sceneform:plugin:1.17.1'
     }
 }
-</code></pre>
+```
 
-<h4>Manifest</h4>
-
+##### Manifest
 ```XML
-申請相機權限
+<!--    申請相機權限-->
 <uses-permission android:name="android.permission.CAMERA"/>
 
-申請AR
+<!--    申請AR-->
 <meta-data
     android:name="com.google.ar.core"
     android:value="optional" />
 ```
 
 <a id="b"></a>
-
-<h3>2.創建FaceArFragment</h3>
-
-<pre><code class="language-Kotlin line-numbers">class FaceArFragment : ArFragment() {
+#### 2.創建FaceArFragment
+```Kotlin
+class FaceArFragment : ArFragment() {
     override fun getSessionConfiguration(session: Session?): Config {
         val config = Config(session)
         config.augmentedFaceMode = Config.AugmentedFaceMode.MESH3D
@@ -77,12 +79,10 @@ dependencies {
         return frameLayout
     }
 }
-</code></pre>
+```
 
 <a id="c"></a>
-
-<h3>3.畫面布局</h3>
-
+#### 3.畫面布局
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -130,15 +130,12 @@ dependencies {
 ```
 
 <a id="d"></a>
+#### 4.創建臉部相關類別
 
-<h3>4.創建臉部相關類別</h3>
+<a href="https://i.imgur.com/ZX8moaR.png"><img src="https://i.imgur.com/ZX8moaR.png" width="50%"/></a>
 
-<img src="https://i.imgur.com/ZX8moaR.png" width="50%">
-
-<h4>臉部位置</h4>
-
-<pre><code class="language-Kotlin line-numbers">package com.example.arfacedemo
-
+##### 臉部位置
+```Kotlin
 import android.graphics.Bitmap
 import android.os.Handler
 import android.os.HandlerThread
@@ -350,22 +347,21 @@ class CustomFaceNode(
         }
     }
 }
-</code></pre>
+```
 
-<h4>提示訊息</h4>
-
-<pre><code class="language-Kotlin line-numbers">class FaceCheckVM : ViewModel() {
+##### 提示訊息
+```Kotlin
+class FaceCheckVM : ViewModel() {
     val text = MutableLiveData<String>().apply {
         value = "請點頭"
     }
 }
-</code></pre>
+```
 
 <a id="e"></a>
-
-<h3>5.程式碼範例</h3>
-
-<pre><code class="language-Kotlin line-numbers">class MainActivity : AppCompatActivity() {
+#### 5.程式碼範例
+```Kotlin
+class MainActivity : AppCompatActivity() {
 
     lateinit var arFragment: FaceArFragment
     var faceNodeMap = HashMap<AugmentedFace, CustomFaceNode>()
@@ -409,14 +405,16 @@ class CustomFaceNode(
         }
     }
 }
-</code></pre>
+```
 
 <a id="f"></a>
-<h3>6.效果展示</h3>
-<img src="https://github.com/MuHongWeiWei/ArFaceDemo/blob/master/app/src/main/res/drawable/demo.gif" width="30%">
+#### 6.效果展示
+
+<a href="https://badgameshow.com/fly/wp-content/uploads/2021/07/Screenrecorder-2021-07-19-17-48-09-559.gif"><img src="https://badgameshow.com/fly/wp-content/uploads/2021/07/Screenrecorder-2021-07-19-17-48-09-559.gif" width="30%"/></a>
+
 
 
 <a id="g"></a>
-<h3>7.Github</h3>
+#### 7.Github
 
-<a class="wp-editor-md-post-content-link" href="https://github.com/MuHongWeiWei/ArFaceDemo">Github</a>
+<a href="https://github.com/MuHongWeiWei/ArFaceDemo">Github</a>

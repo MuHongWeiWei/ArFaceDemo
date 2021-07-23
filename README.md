@@ -410,7 +410,7 @@ class MainActivity : AppCompatActivity() {
 <a id="f"></a>
 #### 6.效果展示
 
-<a href="https://badgameshow.com/fly/wp-content/uploads/2021/07/Screenrecorder-2021-07-19-17-48-09-559.gif"><img src="https://badgameshow.com/fly/wp-content/uploads/2021/07/Screenrecorder-2021-07-19-17-48-09-559.gif" width="30%"/></a>
+<a href="https://github.com/MuHongWeiWei/ArFaceDemo/blob/master/app/src/main/res/drawable/demo.gif"><img src="https://github.com/MuHongWeiWei/ArFaceDemo/blob/master/app/src/main/res/drawable/demo.gif" width="30%"/></a>
 
 
 
